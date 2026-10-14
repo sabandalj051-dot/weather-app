@@ -1,0 +1,6 @@
+{
+  "name": "Atmosphere Weather",
+  "description": "A modern, responsive, accurate weather dashboard with live conditions, hourly timeline, 7-day forecast, and global city search powered by Open-Meteo.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
