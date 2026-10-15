@@ -1,16 +1,16 @@
-@'
-
-# Dependencies and build output
+# Dependencies and generated build output
 node_modules/
 dist/
+dist-ssr/
+coverage/
 
 # Environment secrets
 .env
 .env.*
 !.env.example
 
-# Local editor and OS files
+# Local editor and operating system files
 .vscode/
 .DS_Store
 Thumbs.db
-'@ | Add-Content .gitignore
+*.log
