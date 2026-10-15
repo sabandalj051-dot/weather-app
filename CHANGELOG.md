@@ -7,13 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.1.1] - 2026-10-14
+## [1.0.0] - 2026-10-15
+
+### Stable Release
+- **First stable production release** of Atmosphere Weather.
+- Includes the full feature set for reliable weather lookups, resilient remote API handling, and a polished mobile-friendly experience.
+- Improved resilience and caching make the app ready for broader use in day-to-day conditions.
 
 ### Fixed & Improved
 - **Open-Meteo 503 Service Unavailable Resilience**:
   - Implemented automatic retry mechanism with exponential backoff and jitter (up to 3 retries) on HTTP 503, 502, 504, and 429 status codes.
   - Optimized API request parameters with `forecast_days=7` and `forecast_hours=24`, reducing server payload and processing load by over 80%.
-  - Added intelligent client-side `localStorage` caching with stale-while-revalidate fallback: if the remote weather provider is temporarily congested, the app seamlessly serves cached observations with an informative banner.
+  - Added intelligent client-side `localStorage` caching with stale-while-revalidate fallback: if the remote weather provider is temporarily congested, the app seamlessly serves cached observations with graceful degradation.
   - Enhanced `ErrorState` with automated 5-second countdown auto-retry and tailored diagnostics for server congestion.
 
 ---
